@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Form</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>六角西餐廳</h1>
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdN0M30GB6NSQxfeAhWK0B4PSpuIPGVLnoWo4TrksqtkeKtRA/formResponse" method="post" >
+      <div class="contact">
+        <div class="input-control">
+          <label for="name">姓名</label>
+          <input type="text" name="entry.104959259" id="name" required>
+        </div>
+        <div class="input-control">
+          <label for="phone">電話</label>
+          <input type="text" name="entry.403616441" id="phone" required>
+        </div>
+      </div>
+      <div class="input-control date">
+        <label for="date">日期</label>
+        <input type="date" name="entry.650799372" id="date" class="cover" required>
+      </div>
+      <div class="input-control select">
+        <label for="people">用餐人數</label>
+        <input type="text" name="entry.1491692660" id="people" required>
+      </div>
+
+      <h4>其他項目</h4>
+
+      <ul>
+        <li class="check-item">
+          <input type="checkbox" name="entry.901461210" id="chair" value="需要兒童座椅">
+          <label for="chair">需要兒童座椅</label>
+        </li>
+        <li class="check-item">
+          <input type="checkbox" name="entry.901461210" id="vegs" value="素食餐點">
+          <label for="vegs">素食專區</label>
+        </li>
+        <li class="check-item">
+          <input type="checkbox" name="entry.901461210" id="smoke" value="吸煙區">
+          <label for="smoke">吸菸區</label>
+        </li>
+      </ul>
+
+      <button type="submit" class="btn">送出</button>
+    </form>
+  </div>
+</body>
+</html>

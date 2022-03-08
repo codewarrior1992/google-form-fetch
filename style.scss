@@ -1,0 +1,122 @@
+@mixin pad {
+	@media screen and (max-width: 834px) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media screen and (max-width: 428px) {
+		@content;
+	}
+}
+
+@mixin icon {
+	content: '';
+	position: absolute;
+	background-repeat: no-repeat;
+	pointer-events: none;
+	width: 16px;
+	height: 16px;
+	z-index: 10;
+}
+
+$bc: #212529;
+$wc: #fff;
+
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+	opacity: 0;
+	-webkit-appearance: none;
+}
+
+/* ### UI ### */
+.container {
+	background-color: $wc;
+	color: $bc;
+	max-width: 834px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+h1 {
+	margin: 24px 0;
+	text-align: center;
+	font-size: 32px;
+	line-height: 45px;
+}
+
+form {
+	padding: 17px;
+	@include mobile {
+		padding: 8px;
+	}
+
+	.input-control {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 16px;
+		position: relative;
+		label {
+			margin-bottom: 8px;
+		}
+		input {
+			border: 1px solid #ced4da;
+			height: 38px;
+		}
+
+		&.date::after {
+			background-image: url('./images/date.png');
+			@include icon();
+			top: 43px;
+			right: 14px;
+		}
+		&.select::after {
+			background-image: url('./images/selects.png');
+			@include icon();
+			top: 47px;
+			right: 14px;
+		}
+	}
+
+	.contact {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		@include mobile {
+			flex-direction: column;
+		}
+
+		.input-control {
+			max-width: 396px;
+			width: 100%;
+		}
+	}
+
+	h4 {
+		margin-bottom: 8px;
+	}
+
+	li.check-item {
+		display: flex;
+		margin-bottom: 3px;
+		input[type='checkbox'] {
+			width: 16px;
+			height: 16px;
+			border: 1px solid #ced4da;
+			border-radius: 4px;
+		}
+	}
+
+	.btn {
+		margin-top: 24px;
+		background-color: $bc;
+		color: $wc;
+		text-align: center;
+		display: block;
+		width: 100%;
+		padding: 8px;
+		border: none;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,133 @@
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  -webkit-appearance: none;
+}
+
+/* ### UI ### */
+.container {
+  background-color: #fff;
+  color: #212529;
+  max-width: 834px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 24px 0;
+  text-align: center;
+  font-size: 32px;
+  line-height: 45px;
+}
+
+form {
+  padding: 17px;
+}
+
+@media screen and (max-width: 428px) {
+  form {
+    padding: 8px;
+  }
+}
+
+form .input-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+form .input-control label {
+  margin-bottom: 8px;
+}
+
+form .input-control input {
+  border: 1px solid #ced4da;
+  height: 38px;
+}
+
+form .input-control.date::after {
+  background-image: url("./images/date.png");
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  width: 16px;
+  height: 16px;
+  z-index: 10;
+  top: 43px;
+  right: 14px;
+}
+
+form .input-control.select::after {
+  background-image: url("./images/selects.png");
+  content: '';
+  position: absolute;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  width: 16px;
+  height: 16px;
+  z-index: 10;
+  top: 47px;
+  right: 14px;
+}
+
+form .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (max-width: 428px) {
+  form .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+form .contact .input-control {
+  max-width: 396px;
+  width: 100%;
+}
+
+form h4 {
+  margin-bottom: 8px;
+}
+
+form li.check-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 3px;
+}
+
+form li.check-item input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+form .btn {
+  margin-top: 24px;
+  background-color: #212529;
+  color: #fff;
+  text-align: center;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
